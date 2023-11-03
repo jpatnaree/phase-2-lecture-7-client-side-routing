@@ -11,7 +11,7 @@
       "id": 2,
       "name": "Kitty",
       "image": "/images/cat.png",
-      "likes": 9,
+      "likes": 16,
       "animal_type": "Cat"
     },
     {
@@ -46,8 +46,29 @@
       "id": 7,
       "name": "Goldie",
       "image": "/images/fish.jpeg",
-      "likes": 9,
+      "likes": 10,
       "animal_type": "Fish"
+    },
+    {
+      "name": "Onyx",
+      "image": "https://images.ctfassets.net/cnu0m8re1exe/qDQgxOUG5DNKlKH5TXsbo/813fa629fe33794c7ff439070fc31b89/shutterstock_603117302.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill",
+      "animal_type": "Cat",
+      "likes": 18,
+      "id": 8
+    },
+    {
+      "name": "Quack",
+      "image": "https://d27p2a3djqwgnt.cloudfront.net/wp-content/uploads/2021/02/23163358/animal-1853178_1280-e1614116065482.jpg",
+      "animal_type": "Duck",
+      "likes": 7,
+      "id": 10
+    },
+    {
+      "image": "https://i.ytimg.com/vi/J4fbjNUTGg4/hqdefault.jpg",
+      "name": "Woof",
+      "animal_type": "Dodge",
+      "likes": 0,
+      "id": 11
     }
   ]
 }

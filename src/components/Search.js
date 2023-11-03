@@ -1,5 +1,9 @@
+import NavBar from "./NavBar";
+
 function Search({setSearchText}){
     return (
+        <>
+        {/* <NavBar /> */}
         <div className="searchbar">
             <label htmlFor="search">Search Pets:</label>
             <input
@@ -11,6 +15,7 @@ function Search({setSearchText}){
                 }}
             />
         </div>
+        </>
     )
 }
 

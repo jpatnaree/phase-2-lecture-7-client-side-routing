@@ -4,6 +4,9 @@ import NewPetForm from "./NewPetForm"
 import Search from "./Search"
 import PetList from "./PetList"
 import {useState, useEffect} from "react"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import ErrorPage from "./ErrorPage"
+// import NavBar from "./NavBar"
 
 function App() {
 
@@ -73,13 +76,47 @@ function App() {
     })
   }
 
+  const routes = [
+    {
+      path: "/",
+      element:<> 
+      <Home />
+      {/* <NavBar/> */}
+      </>,
+      errorElement: <ErrorPage />,
+      children : [
+          {
+            path: "/",
+            element: <h1 className="home">Welcome to the Flatapets website!</h1>
+          },
+          {
+            path: "/pets",
+            element: <>
+            {/* <NavBar/> */}
+            <Search setSearchText={setSearchText} />
+            <PetList pets={filteredPets} adoptPet={adoptPet} increaseLikes={increaseLikes} />
+              </>
+          },
+          {
+            path: "/new",
+            element: <>
+            {/* <NavBar/> */}
+            <NewPetForm addPet={addPet} updateFormData={updateFormData} />
+            </>
+      
+          }]
+    }
+    
+  ]
+
+  const router = createBrowserRouter(routes)
+
   return (
     <div className="app">
       <Header />
-      <Home />
-      <NewPetForm addPet={addPet} updateFormData={updateFormData} />
-      <Search setSearchText={setSearchText} />
-      <PetList pets={filteredPets} adoptPet={adoptPet} increaseLikes={increaseLikes} />
+      
+      {/* <Home /> */}
+      <RouterProvider router={router} />
     </div>
   );
 }
